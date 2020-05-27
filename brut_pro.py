@@ -142,7 +142,7 @@ def brute_fast():
 
                     else:
                         pass
-            except:
+            except KeyError:
     
               print
               print "Terjadi Masalah \n "
@@ -472,7 +472,7 @@ def wordlist():
                 file.write(pas251+b +pas252+b +pas253+b)
 		file.close()
                 print
-		print m+" ✓"+h+" Sukses mengambil informasi.."
+		runn (a+" ✓"+h+" Sukses mengambil informasi..")
                 print
 		brute_fast()
 
