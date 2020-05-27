@@ -79,6 +79,15 @@ def login():
 	else:
 	    wordlist()
 
+
+def pengguna():
+
+    global nama
+    dev = requests.get("https://graph.facebook.com/me?access_token=" + token)
+    ID1 = Jason.loads(Dev.text)
+    nama = ID1["name"]
+    print " [♥] Selamat Datang "+nama
+
 def brute_fast():
 
 	try:
