@@ -437,7 +437,7 @@ def wordlist():
 
 		file = open("wordlist.txt", "w")
 		b = "\n"
-		file.write("bangsat"+b +"anjing"+b)
+		file.write("bangsat"+b +"anjing"+b +"sayang"+b +"bismilah"+b +"bismillah"+b)
 		file.write(pas1+b +pas2+b +pas3+b +pas4+b +pas5+b +pas6+b +pas7+b +pas8+b +pas9+b +pas10+b)
 		file.write(pas11+b +pas12+b +pas13+b +pas14+b +pas15+b +pas16+b +pas17+b +pas18+b +pas19+b +pas20+b)
 		file.write(pas21+b +pas22+b +pas23+b +pas24+b +pas25+b +pas26+b +pas27+b +pas28+b +pas29+b +pas30+b)
