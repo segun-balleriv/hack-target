@@ -92,7 +92,7 @@ def pengguna():
         dev = requests.get("https://graph.facebook.com/me?access_token=" + token)
         ID1 = json.loads(dev.text)
         nama = ID1["name"]
-        print k+" ["+p+"π"+k+"]"+h+" Selamat Datang "+p+nama
+        print k+" ["+p+"@"+k+"]"+h+" Selamat Datang "+p+nama
 
     
 def brute_fast():
