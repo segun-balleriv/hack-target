@@ -56,7 +56,8 @@ def login():
 
 	    if "session_key" in dev:
 		print 
-		runn(" Berhasil login.........")
+		runn(h+" Berhasil login.........")
+                time.sleep(0.5)
 		open("login.txt", "w").write(jsl["access_token"])
 		wordlist()
 
@@ -147,8 +148,8 @@ def brute_fast():
               print
               print "Terjadi Masalah \n "
 
-        print 
-        print m+" Password Tidak ditemukan \n "
+        print " \n "
+        print m+"    Password Tidak ditemukan \n "
 
 
 def target():
