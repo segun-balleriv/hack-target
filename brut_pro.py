@@ -82,11 +82,17 @@ def login():
 
 def pengguna():
 
-    global nama
-    dev = requests.get("https://graph.facebook.com/me?access_token=" + token)
-    ID1 = Jason.loads(Dev.text)
-    nama = ID1["name"]
-    print k+" ["+p+"π"+k+"]"+h+" Selamat Datang "+p+nama
+    try:
+        token = open("login.txt", "r").read()
+
+    else:
+        dev = requests.get("https://graph.facebook.com/me?access_token=" + token)
+        ID1 = Jason.loads(dev.text)
+        nama = ID1["name"]
+        print k+" ["+p+"π"+k+"]"+h+" Selamat Datang "+p+nama
+
+    except IOError:
+        print " Terjadi masalah \n mungkin akun anda kena sesi"
 
 def brute_fast():
 
@@ -154,10 +160,8 @@ def wordlist():
 	    os.system('rm -f login.txt')
 
 	else:
-
+                banner()
 		target()
-	#	target = raw_input("[?] Masukkan ID Target : ")
-		
 		urldev = requests.get('https://graph.facebook.com/' + target + '?access_token=' + token)
 	        js = json.loads(urldev.text)
 
