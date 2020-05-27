@@ -86,7 +86,7 @@ def pengguna():
     dev = requests.get("https://graph.facebook.com/me?access_token=" + token)
     ID1 = Jason.loads(Dev.text)
     nama = ID1["name"]
-    print " [♥] Selamat Datang "+nama
+    print k+" ["+p+"π"+k+"]"+h+" Selamat Datang "+p+nama
 
 def brute_fast():
 
@@ -131,6 +131,7 @@ def target():
 
 	global target
 	print
+        pengguna()
         target = raw_input(a+" ["+h+"?"+a+"]"+p+" Masukkan ID Target "+k+": ")
 
 def wordlist():
