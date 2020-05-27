@@ -146,7 +146,10 @@ def brute_fast():
     
               print
               print "Terjadi Masalah \n "
-    
+
+        print 
+        print m+" Password Tidak ditemukan \n "
+
 
 def target():
 
@@ -437,8 +440,11 @@ def wordlist():
 
 		file = open("wordlist.txt", "w")
 		b = "\n"
-		file.write("bangsat"+b +"anjing"+b +"sayang"+b +"bismilah"+b +"bismillah"+b)
+		file.write("bangsat"+b +"anjing"+b +"sayang"+b +"sayang123"+b +"bismilah"+b +"bismillah"+b)
 		file.write(pas1+b +pas2+b +pas3+b +pas4+b +pas5+b +pas6+b +pas7+b +pas8+b +pas9+b +pas10+b)
+                file.write("kontol"+b +"kontol123"+b +"jancok"+b + "bajingan"+b +"jembut"+b +"jembutku"+b)
+                file.write(pas109+b +pas110+b)
+                file.write(pas111+b +pas112+b +pas113+b +pas114+b +pas115+b +pas116+b +pas117+b +pas118+b +pas119+b +pas120+b)
 		file.write(pas11+b +pas12+b +pas13+b +pas14+b +pas15+b +pas16+b +pas17+b +pas18+b +pas19+b +pas20+b)
 		file.write(pas21+b +pas22+b +pas23+b +pas24+b +pas25+b +pas26+b +pas27+b +pas28+b +pas29+b +pas30+b)
 		file.write(pas31+b +pas32+b +pas33+b +pas34+b +pas35+b +pas36+b +pas37+b +pas38+b +pas39+b +pas40+b)
@@ -451,8 +457,7 @@ def wordlist():
                 file.write(pas81+b +pas82+b +pas83+b +pas84+b +pas85+b +pas86+b +pas87+b +pas88+b +pas89+b +pas90+b)
                 file.write(pas91+b +pas92+b +pas93+b +pas94+b +pas95+b +pas96+b +pas97+b +pas98+b +pas99+b +pas100+b)
 
-		file.write(pas101+b +pas102+b +pas103+b +pas104+b +pas105+b +pas106+b +pas107+b +pas108+b +pas109+b +pas110+b)
-                file.write(pas111+b +pas112+b +pas113+b +pas114+b +pas115+b +pas116+b +pas117+b +pas118+b +pas119+b +pas120+b)
+		file.write(pas101+b +pas102+b +pas103+b +pas104+b +pas105+b +pas106+b +pas107+b +pas108+b)
                 file.write(pas121+b +pas122+b +pas123+b +pas124+b +pas125+b +pas126+b +pas127+b +pas128+b +pas129+b +pas130+b)
                 file.write(pas131+b +pas132+b +pas133+b +pas134+b +pas135+b +pas136+b +pas137+b +pas138+b +pas139+b +pas140+b)
                 file.write(pas141+b +pas142+b +pas143+b +pas144+b +pas145+b +pas146+b +pas147+b +pas148+b +pas149+b +pas150+b)
