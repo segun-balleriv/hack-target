@@ -85,15 +85,16 @@ def pengguna():
     try:
         token = open("login.txt", "r").read()
 
+    except IOError:
+        print " Terjadi masalah \n mungkin akun anda kena sesi"
+
     else:
         dev = requests.get("https://graph.facebook.com/me?access_token=" + token)
         ID1 = Jason.loads(dev.text)
         nama = ID1["name"]
         print k+" ["+p+"π"+k+"]"+h+" Selamat Datang "+p+nama
 
-    except IOError:
-        print " Terjadi masalah \n mungkin akun anda kena sesi"
-
+    
 def brute_fast():
 
 	try:
