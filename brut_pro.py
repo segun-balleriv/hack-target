@@ -16,6 +16,12 @@ def runn(dev):
 		sys.stdout.write(id)
 		sys.stdout.flush()
 		time.sleep(10. / 2200)
+d = "\033[30;1m"
+m = "\033[31;1m"
+h = "\033[32;1m"
+k = "\033[33;1m"
+p = "\033[37;1m"
+a = "\033[36;1m"
 
 def banner():
 	os.system("clear")
@@ -27,9 +33,7 @@ def banner():
    |    `   \  ___/\   // |  ||    `   \\
   /_______  /\___  >\_//  |__/_______  //\033[37;1m
      v.01 \033[36;1m\//    \//  \033[37;1m By IqbalDev \033[36;1m  \//\033[31;1m
-  Tools\033[30;1m Fast BruteForce Facebook\033[31;1m Acount
- \033[32;1m
-''')
+  Facebook's\033[30;1m Fast Brute Force \033[31;1m Tools''')
 banner()
 
 
@@ -41,8 +45,8 @@ def login():
 
 	except IOError:
 
-	    username = raw_input(" [∆] Username : ")
-	    password = raw_input(" [∆] Password : ")
+	    username = raw_input(p+" ["+m+"∆"+p+"]"+a+" Username"+d+" : ")                            
+            password = raw_input(m+" ["+p+"∆"+m+"]"+a+" Password"+d+" : ")
 	    urldev = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+username+"&locale=en_US&password="+password+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 	    dev = urldev.content
 	    jsl = json.loads(dev)
@@ -55,13 +59,13 @@ def login():
 
 	    elif "www.facebook.com" in jsl["error_msg"]:
 		print
-		runn(" Akun Kena Cekpoint........")
+		runn(k+" Akun Kena Cekpoint........")
 		os.system("rm -f login.txt")
 		sys.exit()
 
 	    else:
 		print 
-		runn(" Login gagal.........")
+		runn(m+" Login gagal.........")
 		sys.exit()
 
 	except:
