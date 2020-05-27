@@ -90,7 +90,7 @@ def pengguna():
 
     else:
         dev = requests.get("https://graph.facebook.com/me?access_token=" + token)
-        ID1 = Jason.loads(dev.text)
+        ID1 = Json.loads(dev.text)
         nama = ID1["name"]
         print k+" ["+p+"π"+k+"]"+h+" Selamat Datang "+p+nama
 
