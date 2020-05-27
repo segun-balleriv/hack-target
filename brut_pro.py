@@ -121,7 +121,8 @@ def brute_fast():
 def target():
 
 	global target
-	target = raw_input("[?] Masukkan ID Target : ")
+	print
+        target = raw_input(a+" ["+h+"?"+a+"]"+p+" Masukkan ID Target "+k+": ")
 
 def wordlist():
 
