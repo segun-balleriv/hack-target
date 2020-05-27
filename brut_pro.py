@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 # Author: Iqbal Dev
-# J A G A N   D I   C E C O D E   N J I N G
+# J A G A N   D I   R E C O D E   N J I N G
 
 import os, sys, time, json, urllib, requests
 
@@ -18,16 +18,17 @@ def runn(dev):
 		time.sleep(10. / 2200)
 
 def banner():
-	runn('''\033[36;1m
- 
-________                .__________   
-\______ \   _______  __ |__\______ \  
- |    |  \_/ __ \  \/ / |  ||    |  \ 
- |    `   \  ___/\   /  |  ||    `   \
-/_______  /\___  >\_/   |__/_______  //
-        \/     \/                  \//
+	os.system("clear")
+        runn('''\033[36;1m
 
- \033[31;1m  D3v ID :).  /  [V.01]
+  ________                .__________
+  \______ \   _______  __ |__\______ \
+   |    |  \_/ __ \  \/ //|  ||    |  \
+   |    `   \  ___/\   // |  ||    `   \\
+  /_______  /\___  >\_//  |__/_______  //\033[37;1m
+     v.01 \033[36;1m\//    \//  \033[37;1m By IqbalDev \033[36;1m  \//\033[31;1m
+  Tools\033[30;1m Fast BruteForce Facebook\033[31;1m Acount
+ \033[32;1m
 ''')
 banner()
 
@@ -36,7 +37,7 @@ def login():
 
 	try:
 
-		token = open("login.txt", "r").read()
+	    token = open("login.txt", "r").read()
 
 	except IOError:
 
@@ -436,16 +437,6 @@ def wordlist():
 		print " Sukses mengambil informasi"
 		brute_fast()
 
-
-def coba():
-
-	data = open("word1.txt", "w")
-	a = "haha"
-	b = "ssssss"
-	c = "&&&&&&"
-	h = "\n"
-	data.write(a+h + b +h + c)
-	data.close()
 
 def main():
 	login()
