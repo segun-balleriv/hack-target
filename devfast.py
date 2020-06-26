@@ -11,7 +11,7 @@ try:
 except ImportError:
 
 	os.system("pip2 install requests")
-        os.system("python2 brut_pro.py")
+        os.system("python2 devfast.py")
 
 def runn(dev):
 	for id in dev + '\n':
